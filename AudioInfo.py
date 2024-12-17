@@ -30,8 +30,8 @@ def get_audio_info(file_path: str) -> None:
         print(f"Каналы: {info.get('channels', 'Неизвестно')}")
         print(f"Размер файла: {round(os.path.getsize(file_path) / (1024 * 1024), 2)} МБ")
         
-    except Exception as e:
-        print(f"Произошла ошибка при чтении файла: {str(e)}")
+    except Exception as exc:
+        print(f"Произошла ошибка при чтении файла: {str(exc)}")
 
 if __name__ == "__main__":
     file_path = input("Введите путь к аудиофайлу: ")
